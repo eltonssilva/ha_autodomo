@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: AutoDomo Addon Base NodeRed
-url: 'https://github.com/eltonssilva/addon-node-red'
+url: 'https://github.com/eltonssilva/ha_autodomo'
 maintainer: Elton de Sousa e Silva <eltonss.eng@hmail.com>
