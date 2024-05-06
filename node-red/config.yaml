@@ -1,9 +1,9 @@
 ---
 name: AutoDomo
-version: "1.0.0"
+version: "1.0.1"
 slug: autodomo
 description: AutoDomo Addon Base NodeRed
-url: https://github.com/eltonssilva/addon-node-red
+url: https://github.com/eltonssilva/ha_autodomo
 codenotary: eltonss.eng@gmail.com
 ingress: true
 ingress_port: 0

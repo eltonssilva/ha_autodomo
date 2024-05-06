@@ -23,6 +23,8 @@ if ! bashio::fs.file_exists '/config/settings.js'; then
     # Copy in template files
     cp /etc/node-red/flows.json /config/
     cp /etc/node-red/settings.js /config/
+    cp /etc/node-red/flows_cred.json /config/
+    cp /etc/node-red/.config.runtime.json /config/
 
     # Create random flow id
     id=$(node -e "console.log((1+Math.random()*4294967295).toString(16));")
