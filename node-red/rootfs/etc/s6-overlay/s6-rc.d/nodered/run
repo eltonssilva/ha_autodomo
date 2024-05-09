@@ -8,6 +8,17 @@ export NODE_PATH=/opt/node_modules:/data/node_modules
 declare -a options
 declare max_old_space_size
 
+if bashio::fs.file_exists '/config/settings.js'; then
+
+    # Copy in template files
+    cp -f /etc/node-red/flows.json /config/
+    cp -f /etc/node-red/settings.js /config/
+    cp -f /etc/node-red/flows_cred.json /config/
+    cp -f /etc/node-red/.config.runtime.json /config/
+
+fi
+
+
 if bashio::config.exists 'max_old_space_size'; then
     max_old_space_size=$(bashio::config 'max_old_space_size')
     bashio::log.info "Setting max_old_space_size to ${max_old_space_size}"
