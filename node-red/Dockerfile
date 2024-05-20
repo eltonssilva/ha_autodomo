@@ -17,7 +17,7 @@ RUN apk add --no-cache --virtual .build-dependencies build-base=0.5-r3 linux-hea
 #RUN apk add --no-cache git=2.43.0-r0 icu-data-full=74.1-r0 nginx=1.24.0-r16 openssh-client=9.6_p1-r0 patch=2.7.6-r10
 
 #RUN apk update
-RUN apk add --no-cache git=2.43.0-r0
+RUN apk add --no-cache git
 RUN apk add --no-cache icu-data-full=74.1-r0
 RUN apk add --no-cache nginx=1.24.0-r16
 RUN apk add --no-cache openssh-client=9.6_p1-r0
