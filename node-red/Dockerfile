@@ -14,13 +14,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 RUN apk add --no-cache --virtual .build-dependencies build-base=0.5-r3 linux-headers=6.5-r0 py3-pip=23.3.1-r0 python3-dev=3.11.9-r0
-#RUN apk add --no-cache git=2.43.0-r0 icu-data-full=74.1-r0 nginx=1.24.0-r16 openssh-client=9.6_p1-r0 patch=2.7.6-r10
 
 #RUN apk update
 RUN apk add --no-cache git
 RUN apk add --no-cache icu-data-full=74.1-r0
 RUN apk add --no-cache nginx=1.24.0-r16
-RUN apk add --no-cache openssh-client=9.6_p1-r0
+#RUN apk add --no-cache openssh-client=9.6_p1-r0
+RUN apk add --no-cache openssh-client
 RUN apk add --no-cache patch=2.7.6-r10
 
 RUN npm install --no-audit --no-fund --no-update-notifier --omit=dev --unsafe-perm
