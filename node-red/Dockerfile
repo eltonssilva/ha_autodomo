@@ -1,4 +1,5 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-nodejs:latest
+#ARG BUILD_FROM=ghcr.io/hassio-addons/base-nodejs:latest
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:17.2.5
 #ARG BUILD_FROM=alpine:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
@@ -14,11 +15,13 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-#RUN apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
+RUN apk add --no-cache --virtual .build-dependencies build-base=0.5-r3 linux-headers=6.6-r1 py3-pip=24.3.1-r0 python3-dev=3.12.11-r0
 #RUN apk update && apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
 RUN apk update
 #RUN apk add --no-cache build-base
-RUN apk -v add build-base
+#RUN apk -v add build-base
+RUN apk add --no-cache gcc g++ make libc-dev
+
 RUN apk add --no-cache linux-headers
 RUN apk add --no-cache py3-pip
 RUN apk add --no-cache python3-dev
