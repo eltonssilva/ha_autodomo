@@ -15,11 +15,11 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 #RUN apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
-RUN apk update && apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
-#RUN apk update
+#RUN apk update && apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
+RUN apk update
 #RUN apk add --no-cache build-base
 #RUN apk add --no-cache linux-headers
-#RUN apk add --no-cache py3-pip
+RUN apk add --no-cache py3-pip
 #RUN apk add --no-cache python3-dev
 
 
