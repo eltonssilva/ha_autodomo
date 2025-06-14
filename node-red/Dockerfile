@@ -1,5 +1,5 @@
-#ARG BUILD_FROM=ghcr.io/hassio-addons/base-nodejs:latest
-ARG BUILD_FROM=alpine:latest
+ARG BUILD_FROM=ghcr.io/hassio-addons/base-nodejs:latest
+#ARG BUILD_FROM=alpine:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
