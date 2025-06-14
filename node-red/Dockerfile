@@ -20,7 +20,7 @@ RUN apk update
 #RUN apk add --no-cache build-base
 #RUN apk add --no-cache linux-headers
 RUN apk add --no-cache py3-pip
-#RUN apk add --no-cache python3-dev
+RUN apk add --no-cache python3-dev
 
 
 
