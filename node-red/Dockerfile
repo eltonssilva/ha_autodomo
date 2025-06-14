@@ -14,7 +14,9 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-RUN apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
+#RUN apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
+RUN apk update && apk add --no-cache --virtual .build-dependencies build-base linux-headers py3-pip python3-dev
+
 
 
 
