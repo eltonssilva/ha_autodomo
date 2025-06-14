@@ -1,6 +1,6 @@
 ---
 name: AutoDomo
-version: "1.4.7"
+version: "1.4.8"
 slug: autodomo
 description: AutoDomo Addon Base NodeRed
 url: https://github.com/eltonssilva/ha_autodomo
